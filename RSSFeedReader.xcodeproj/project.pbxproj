@@ -8,24 +8,106 @@
 
 /* Begin PBXBuildFile section */
 		AB33F1B024614F9E00ECD2DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1AF24614F9E00ECD2DF /* AppDelegate.swift */; };
-		AB33F1B224614F9E00ECD2DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1B124614F9E00ECD2DF /* SceneDelegate.swift */; };
-		AB33F1B424614F9E00ECD2DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1B324614F9E00ECD2DF /* ViewController.swift */; };
-		AB33F1B724614F9E00ECD2DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB33F1B524614F9E00ECD2DF /* Main.storyboard */; };
-		AB33F1BA24614F9E00ECD2DF /* RSSFeedReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1B824614F9E00ECD2DF /* RSSFeedReader.xcdatamodeld */; };
+		AB33F1B424614F9E00ECD2DF /* RSSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1B324614F9E00ECD2DF /* RSSViewController.swift */; };
+		AB33F1B724614F9E00ECD2DF /* RSSController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB33F1B524614F9E00ECD2DF /* RSSController.storyboard */; };
 		AB33F1BC24614FA300ECD2DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB33F1BB24614FA300ECD2DF /* Assets.xcassets */; };
 		AB33F1BF24614FA300ECD2DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB33F1BD24614FA300ECD2DF /* LaunchScreen.storyboard */; };
+		AB33F1C72461D73100ECD2DF /* RSSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1C62461D73100ECD2DF /* RSSViewModel.swift */; };
+		AB33F1CA2461D92D00ECD2DF /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1C92461D92D00ECD2DF /* FeedCell.swift */; };
+		AB33F1CC2461DE4200ECD2DF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1CB2461DE4200ECD2DF /* FeedViewController.swift */; };
+		AB33F1CE2461DF1600ECD2DF /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1CD2461DF1600ECD2DF /* ItemCell.swift */; };
+		AB33F1D02461E17000ECD2DF /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1CF2461E17000ECD2DF /* FeedViewModel.swift */; };
+		AB33F1D52461E23600ECD2DF /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1D42461E23600ECD2DF /* RootCoordinator.swift */; };
+		AB33F1D82461E32900ECD2DF /* RSSCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1D72461E32900ECD2DF /* RSSCoordinator.swift */; };
+		AB33F1DE2461E47D00ECD2DF /* WeatherCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1DD2461E47D00ECD2DF /* WeatherCoordinator.swift */; };
+		AB33F1E02461E66700ECD2DF /* FeedController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB33F1DF2461E66700ECD2DF /* FeedController.storyboard */; };
+		AB33F1E22461EA7000ECD2DF /* WeatherController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB33F1E12461EA7000ECD2DF /* WeatherController.storyboard */; };
+		AB33F1E42461EA7D00ECD2DF /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1E32461EA7D00ECD2DF /* WeatherViewController.swift */; };
+		AB33F1E62461EA8B00ECD2DF /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1E52461EA8B00ECD2DF /* WeatherViewModel.swift */; };
+		AB33F1E82461F1FC00ECD2DF /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB33F1E72461F1FC00ECD2DF /* PersistenceService.swift */; };
+		AB3ACB612464AF61004CB190 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3ACB602464AF61004CB190 /* CityCell.swift */; };
+		AB3D09C2246486BF00FBCE25 /* WeatherDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D09C1246486BF00FBCE25 /* WeatherDataStore.swift */; };
+		AB3D09C4246486D400FBCE25 /* WeatherNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D09C3246486D400FBCE25 /* WeatherNetworkingService.swift */; };
+		AB3D09CB24649B4B00FBCE25 /* world-cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB3D09C824648C8F00FBCE25 /* world-cities.txt */; };
+		AB3D09CE24649D7000FBCE25 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D09CD24649D7000FBCE25 /* NetworkRouter.swift */; };
+		AB3D09D024649D9700FBCE25 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D09CF24649D9700FBCE25 /* EndPointType.swift */; };
+		AB3D09D424649F5500FBCE25 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D09D324649F5500FBCE25 /* HTTPTask.swift */; };
+		AB3D09D724649F9E00FBCE25 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D09D624649F9E00FBCE25 /* ParameterEncoding.swift */; };
+		AB3D09D924649FBD00FBCE25 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D09D824649FBD00FBCE25 /* URLParameterEncoder.swift */; };
+		AB3D09DB24649FD700FBCE25 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D09DA24649FD700FBCE25 /* JSONParameterEncoder.swift */; };
+		AB3D09DD2464A1FC00FBCE25 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D09DC2464A1FC00FBCE25 /* EndPoint.swift */; };
+		AB3D09E02464A3C200FBCE25 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D09DF2464A3C200FBCE25 /* Weather.swift */; };
+		AB3D09E32464AA7300FBCE25 /* City+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D09E12464AA7300FBCE25 /* City+CoreDataClass.swift */; };
+		AB3D09E42464AA7300FBCE25 /* City+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D09E22464AA7300FBCE25 /* City+CoreDataProperties.swift */; };
+		AB4F2ADA2464C7A600EFAD1B /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4F2AD92464C7A600EFAD1B /* CityViewController.swift */; };
+		AB4F2ADC2464C7AF00EFAD1B /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4F2ADB2464C7AF00EFAD1B /* CityViewModel.swift */; };
+		AB4F2ADE2464C7B800EFAD1B /* CityController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4F2ADD2464C7B800EFAD1B /* CityController.storyboard */; };
+		AB4F2AE12464C88400EFAD1B /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4F2AE02464C88400EFAD1B /* DayCell.swift */; };
+		AB4F2AE32464CA0D00EFAD1B /* ForecastWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4F2AE22464CA0D00EFAD1B /* ForecastWeather.swift */; };
+		AB9D74772462A08A00AFD183 /* RSSDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D74762462A08A00AFD183 /* RSSDataStore.swift */; };
+		ABDBEB302462A4AC003FC0A7 /* ItemsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBEB2F2462A4AC003FC0A7 /* ItemsParser.swift */; };
+		ABDBEB332463EEB7003FC0A7 /* ItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBEB322463EEB7003FC0A7 /* ItemCellViewModel.swift */; };
+		ABDBEB3E24641D24003FC0A7 /* RSSFeedReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABDBEB3C24641D24003FC0A7 /* RSSFeedReader.xcdatamodeld */; };
+		ABDBEB4124641D78003FC0A7 /* Feed+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBEB3F24641D78003FC0A7 /* Feed+CoreDataClass.swift */; };
+		ABDBEB4224641D78003FC0A7 /* Feed+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBEB4024641D78003FC0A7 /* Feed+CoreDataProperties.swift */; };
+		ABDBEB4424641DC8003FC0A7 /* RSSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBEB4324641DC8003FC0A7 /* RSSItem.swift */; };
+		ABDBEB4624643448003FC0A7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBEB4524643448003FC0A7 /* Extensions.swift */; };
+		ABDBEB4A24646C9B003FC0A7 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBEB4924646C9B003FC0A7 /* ItemViewController.swift */; };
+		ABDBEB4C24646CA5003FC0A7 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBEB4B24646CA5003FC0A7 /* ItemViewModel.swift */; };
+		ABDBEB4E24646CB0003FC0A7 /* ItemController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABDBEB4D24646CB0003FC0A7 /* ItemController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB33F1AC24614F9E00ECD2DF /* RSSFeedReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSFeedReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB33F1AF24614F9E00ECD2DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB33F1B124614F9E00ECD2DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB33F1B324614F9E00ECD2DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AB33F1B624614F9E00ECD2DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AB33F1B924614F9E00ECD2DF /* RSSFeedReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RSSFeedReader.xcdatamodel; sourceTree = "<group>"; };
+		AB33F1B324614F9E00ECD2DF /* RSSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSViewController.swift; sourceTree = "<group>"; };
+		AB33F1B624614F9E00ECD2DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RSSController.storyboard; sourceTree = "<group>"; };
 		AB33F1BB24614FA300ECD2DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB33F1BE24614FA300ECD2DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB33F1C024614FA300ECD2DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB33F1C62461D73100ECD2DF /* RSSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSViewModel.swift; sourceTree = "<group>"; };
+		AB33F1C92461D92D00ECD2DF /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		AB33F1CB2461DE4200ECD2DF /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		AB33F1CD2461DF1600ECD2DF /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		AB33F1CF2461E17000ECD2DF /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		AB33F1D42461E23600ECD2DF /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		AB33F1D72461E32900ECD2DF /* RSSCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSCoordinator.swift; sourceTree = "<group>"; };
+		AB33F1DD2461E47D00ECD2DF /* WeatherCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCoordinator.swift; sourceTree = "<group>"; };
+		AB33F1DF2461E66700ECD2DF /* FeedController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedController.storyboard; sourceTree = "<group>"; };
+		AB33F1E12461EA7000ECD2DF /* WeatherController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeatherController.storyboard; sourceTree = "<group>"; };
+		AB33F1E32461EA7D00ECD2DF /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		AB33F1E52461EA8B00ECD2DF /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		AB33F1E72461F1FC00ECD2DF /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		AB3ACB602464AF61004CB190 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		AB3D09C1246486BF00FBCE25 /* WeatherDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataStore.swift; sourceTree = "<group>"; };
+		AB3D09C3246486D400FBCE25 /* WeatherNetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNetworkingService.swift; sourceTree = "<group>"; };
+		AB3D09C824648C8F00FBCE25 /* world-cities.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "world-cities.txt"; sourceTree = "<group>"; };
+		AB3D09CD24649D7000FBCE25 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		AB3D09CF24649D9700FBCE25 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		AB3D09D324649F5500FBCE25 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		AB3D09D624649F9E00FBCE25 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		AB3D09D824649FBD00FBCE25 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		AB3D09DA24649FD700FBCE25 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		AB3D09DC2464A1FC00FBCE25 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		AB3D09DF2464A3C200FBCE25 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		AB3D09E12464AA7300FBCE25 /* City+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AB3D09E22464AA7300FBCE25 /* City+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AB4F2AD92464C7A600EFAD1B /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
+		AB4F2ADB2464C7AF00EFAD1B /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
+		AB4F2ADD2464C7B800EFAD1B /* CityController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CityController.storyboard; sourceTree = "<group>"; };
+		AB4F2AE02464C88400EFAD1B /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		AB4F2AE22464CA0D00EFAD1B /* ForecastWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeather.swift; sourceTree = "<group>"; };
+		AB9D74762462A08A00AFD183 /* RSSDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSDataStore.swift; sourceTree = "<group>"; };
+		ABDBEB2F2462A4AC003FC0A7 /* ItemsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsParser.swift; sourceTree = "<group>"; };
+		ABDBEB322463EEB7003FC0A7 /* ItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellViewModel.swift; sourceTree = "<group>"; };
+		ABDBEB3D24641D24003FC0A7 /* RSSFeedReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RSSFeedReader.xcdatamodel; sourceTree = "<group>"; };
+		ABDBEB3F24641D78003FC0A7 /* Feed+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feed+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ABDBEB4024641D78003FC0A7 /* Feed+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feed+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ABDBEB4324641DC8003FC0A7 /* RSSItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSItem.swift; sourceTree = "<group>"; };
+		ABDBEB4524643448003FC0A7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		ABDBEB4924646C9B003FC0A7 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		ABDBEB4B24646CA5003FC0A7 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		ABDBEB4D24646CB0003FC0A7 /* ItemController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +141,208 @@
 			isa = PBXGroup;
 			children = (
 				AB33F1AF24614F9E00ECD2DF /* AppDelegate.swift */,
-				AB33F1B124614F9E00ECD2DF /* SceneDelegate.swift */,
-				AB33F1B324614F9E00ECD2DF /* ViewController.swift */,
-				AB33F1B524614F9E00ECD2DF /* Main.storyboard */,
+				AB3D09C824648C8F00FBCE25 /* world-cities.txt */,
+				AB3D09C52464882300FBCE25 /* Service */,
+				ABDBEB5024647EF9003FC0A7 /* WeatherService */,
+				AB33F1E92461F20000ECD2DF /* RSSService */,
+				AB33F1D22461E1C000ECD2DF /* UI */,
 				AB33F1BB24614FA300ECD2DF /* Assets.xcassets */,
+				ABDBEB3C24641D24003FC0A7 /* RSSFeedReader.xcdatamodeld */,
 				AB33F1BD24614FA300ECD2DF /* LaunchScreen.storyboard */,
 				AB33F1C024614FA300ECD2DF /* Info.plist */,
-				AB33F1B824614F9E00ECD2DF /* RSSFeedReader.xcdatamodeld */,
 			);
 			path = RSSFeedReader;
+			sourceTree = "<group>";
+		};
+		AB33F1D12461E1B800ECD2DF /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				AB33F1D42461E23600ECD2DF /* RootCoordinator.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		AB33F1D22461E1C000ECD2DF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				ABDBEB4724643452003FC0A7 /* Helpers */,
+				AB33F1D12461E1B800ECD2DF /* Root */,
+				AB33F1DC2461E46400ECD2DF /* Weather */,
+				AB33F1D62461E2EC00ECD2DF /* RSS */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AB33F1D62461E2EC00ECD2DF /* RSS */ = {
+			isa = PBXGroup;
+			children = (
+				AB33F1DB2461E38A00ECD2DF /* Cell */,
+				AB33F1D72461E32900ECD2DF /* RSSCoordinator.swift */,
+				AB33F1B324614F9E00ECD2DF /* RSSViewController.swift */,
+				AB33F1C62461D73100ECD2DF /* RSSViewModel.swift */,
+				AB33F1B524614F9E00ECD2DF /* RSSController.storyboard */,
+				ABDBEB4824646C83003FC0A7 /* Item */,
+				AB33F1D92461E35B00ECD2DF /* Feed */,
+			);
+			path = RSS;
+			sourceTree = "<group>";
+		};
+		AB33F1D92461E35B00ECD2DF /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				AB33F1DA2461E37C00ECD2DF /* Cell */,
+				AB33F1CB2461DE4200ECD2DF /* FeedViewController.swift */,
+				AB33F1CF2461E17000ECD2DF /* FeedViewModel.swift */,
+				AB33F1DF2461E66700ECD2DF /* FeedController.storyboard */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		AB33F1DA2461E37C00ECD2DF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AB33F1CD2461DF1600ECD2DF /* ItemCell.swift */,
+				ABDBEB322463EEB7003FC0A7 /* ItemCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		AB33F1DB2461E38A00ECD2DF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AB33F1C92461D92D00ECD2DF /* FeedCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		AB33F1DC2461E46400ECD2DF /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				ABDBEB4F24647BAF003FC0A7 /* Cell */,
+				AB33F1DD2461E47D00ECD2DF /* WeatherCoordinator.swift */,
+				AB33F1E32461EA7D00ECD2DF /* WeatherViewController.swift */,
+				AB33F1E52461EA8B00ECD2DF /* WeatherViewModel.swift */,
+				AB33F1E12461EA7000ECD2DF /* WeatherController.storyboard */,
+				AB4F2AD82464C78200EFAD1B /* CityDescription */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		AB33F1E92461F20000ECD2DF /* RSSService */ = {
+			isa = PBXGroup;
+			children = (
+				ABDBEB312463C7CA003FC0A7 /* Objects */,
+				AB9D74762462A08A00AFD183 /* RSSDataStore.swift */,
+				ABDBEB2F2462A4AC003FC0A7 /* ItemsParser.swift */,
+			);
+			path = RSSService;
+			sourceTree = "<group>";
+		};
+		AB3D09C52464882300FBCE25 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AB33F1E72461F1FC00ECD2DF /* PersistenceService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AB3D09CC24649D4D00FBCE25 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AB3D09DC2464A1FC00FBCE25 /* EndPoint.swift */,
+				AB3D09D524649F8900FBCE25 /* Encoding */,
+				AB3D09CD24649D7000FBCE25 /* NetworkRouter.swift */,
+				AB3D09CF24649D9700FBCE25 /* EndPointType.swift */,
+				AB3D09D324649F5500FBCE25 /* HTTPTask.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AB3D09D524649F8900FBCE25 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				AB3D09D624649F9E00FBCE25 /* ParameterEncoding.swift */,
+				AB3D09D824649FBD00FBCE25 /* URLParameterEncoder.swift */,
+				AB3D09DA24649FD700FBCE25 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		AB3D09DE2464A36A00FBCE25 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				AB3D09E12464AA7300FBCE25 /* City+CoreDataClass.swift */,
+				AB3D09E22464AA7300FBCE25 /* City+CoreDataProperties.swift */,
+				AB3D09DF2464A3C200FBCE25 /* Weather.swift */,
+				AB4F2AE22464CA0D00EFAD1B /* ForecastWeather.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		AB4F2AD82464C78200EFAD1B /* CityDescription */ = {
+			isa = PBXGroup;
+			children = (
+				AB4F2ADF2464C87A00EFAD1B /* Cell */,
+				AB4F2AD92464C7A600EFAD1B /* CityViewController.swift */,
+				AB4F2ADB2464C7AF00EFAD1B /* CityViewModel.swift */,
+				AB4F2ADD2464C7B800EFAD1B /* CityController.storyboard */,
+			);
+			path = CityDescription;
+			sourceTree = "<group>";
+		};
+		AB4F2ADF2464C87A00EFAD1B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AB4F2AE02464C88400EFAD1B /* DayCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		ABDBEB312463C7CA003FC0A7 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				ABDBEB3F24641D78003FC0A7 /* Feed+CoreDataClass.swift */,
+				ABDBEB4024641D78003FC0A7 /* Feed+CoreDataProperties.swift */,
+				ABDBEB4324641DC8003FC0A7 /* RSSItem.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		ABDBEB4724643452003FC0A7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ABDBEB4524643448003FC0A7 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		ABDBEB4824646C83003FC0A7 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				ABDBEB4924646C9B003FC0A7 /* ItemViewController.swift */,
+				ABDBEB4B24646CA5003FC0A7 /* ItemViewModel.swift */,
+				ABDBEB4D24646CB0003FC0A7 /* ItemController.storyboard */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		ABDBEB4F24647BAF003FC0A7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AB3ACB602464AF61004CB190 /* CityCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		ABDBEB5024647EF9003FC0A7 /* WeatherService */ = {
+			isa = PBXGroup;
+			children = (
+				AB3D09DE2464A36A00FBCE25 /* Objects */,
+				AB3D09C1246486BF00FBCE25 /* WeatherDataStore.swift */,
+				AB3D09C3246486D400FBCE25 /* WeatherNetworkingService.swift */,
+				AB3D09CC24649D4D00FBCE25 /* Helpers */,
+			);
+			path = WeatherService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +403,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB3D09CB24649B4B00FBCE25 /* world-cities.txt in Resources */,
+				AB33F1E02461E66700ECD2DF /* FeedController.storyboard in Resources */,
 				AB33F1BF24614FA300ECD2DF /* LaunchScreen.storyboard in Resources */,
 				AB33F1BC24614FA300ECD2DF /* Assets.xcassets in Resources */,
-				AB33F1B724614F9E00ECD2DF /* Main.storyboard in Resources */,
+				AB33F1E22461EA7000ECD2DF /* WeatherController.storyboard in Resources */,
+				AB4F2ADE2464C7B800EFAD1B /* CityController.storyboard in Resources */,
+				ABDBEB4E24646CB0003FC0A7 /* ItemController.storyboard in Resources */,
+				AB33F1B724614F9E00ECD2DF /* RSSController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,22 +421,58 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB33F1B424614F9E00ECD2DF /* ViewController.swift in Sources */,
-				AB33F1BA24614F9E00ECD2DF /* RSSFeedReader.xcdatamodeld in Sources */,
+				AB3D09D424649F5500FBCE25 /* HTTPTask.swift in Sources */,
+				AB3D09E02464A3C200FBCE25 /* Weather.swift in Sources */,
+				AB33F1B424614F9E00ECD2DF /* RSSViewController.swift in Sources */,
+				ABDBEB4224641D78003FC0A7 /* Feed+CoreDataProperties.swift in Sources */,
+				AB4F2AE12464C88400EFAD1B /* DayCell.swift in Sources */,
+				AB33F1E62461EA8B00ECD2DF /* WeatherViewModel.swift in Sources */,
+				AB33F1E42461EA7D00ECD2DF /* WeatherViewController.swift in Sources */,
+				AB33F1CA2461D92D00ECD2DF /* FeedCell.swift in Sources */,
+				ABDBEB332463EEB7003FC0A7 /* ItemCellViewModel.swift in Sources */,
+				AB33F1D82461E32900ECD2DF /* RSSCoordinator.swift in Sources */,
+				AB3D09D924649FBD00FBCE25 /* URLParameterEncoder.swift in Sources */,
+				ABDBEB4C24646CA5003FC0A7 /* ItemViewModel.swift in Sources */,
+				AB3D09DD2464A1FC00FBCE25 /* EndPoint.swift in Sources */,
+				ABDBEB3E24641D24003FC0A7 /* RSSFeedReader.xcdatamodeld in Sources */,
+				AB33F1C72461D73100ECD2DF /* RSSViewModel.swift in Sources */,
+				AB4F2AE32464CA0D00EFAD1B /* ForecastWeather.swift in Sources */,
+				AB3ACB612464AF61004CB190 /* CityCell.swift in Sources */,
+				AB9D74772462A08A00AFD183 /* RSSDataStore.swift in Sources */,
+				AB3D09D024649D9700FBCE25 /* EndPointType.swift in Sources */,
+				AB4F2ADC2464C7AF00EFAD1B /* CityViewModel.swift in Sources */,
+				ABDBEB4124641D78003FC0A7 /* Feed+CoreDataClass.swift in Sources */,
+				ABDBEB4A24646C9B003FC0A7 /* ItemViewController.swift in Sources */,
+				AB3D09E32464AA7300FBCE25 /* City+CoreDataClass.swift in Sources */,
+				ABDBEB4424641DC8003FC0A7 /* RSSItem.swift in Sources */,
+				AB33F1E82461F1FC00ECD2DF /* PersistenceService.swift in Sources */,
+				ABDBEB4624643448003FC0A7 /* Extensions.swift in Sources */,
+				AB33F1CE2461DF1600ECD2DF /* ItemCell.swift in Sources */,
+				AB3D09DB24649FD700FBCE25 /* JSONParameterEncoder.swift in Sources */,
+				AB3D09D724649F9E00FBCE25 /* ParameterEncoding.swift in Sources */,
+				AB3D09C4246486D400FBCE25 /* WeatherNetworkingService.swift in Sources */,
+				AB3D09C2246486BF00FBCE25 /* WeatherDataStore.swift in Sources */,
+				AB4F2ADA2464C7A600EFAD1B /* CityViewController.swift in Sources */,
+				AB33F1CC2461DE4200ECD2DF /* FeedViewController.swift in Sources */,
+				AB33F1DE2461E47D00ECD2DF /* WeatherCoordinator.swift in Sources */,
+				AB3D09CE24649D7000FBCE25 /* NetworkRouter.swift in Sources */,
+				AB3D09E42464AA7300FBCE25 /* City+CoreDataProperties.swift in Sources */,
+				AB33F1D02461E17000ECD2DF /* FeedViewModel.swift in Sources */,
+				ABDBEB302462A4AC003FC0A7 /* ItemsParser.swift in Sources */,
+				AB33F1D52461E23600ECD2DF /* RootCoordinator.swift in Sources */,
 				AB33F1B024614F9E00ECD2DF /* AppDelegate.swift in Sources */,
-				AB33F1B224614F9E00ECD2DF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AB33F1B524614F9E00ECD2DF /* Main.storyboard */ = {
+		AB33F1B524614F9E00ECD2DF /* RSSController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AB33F1B624614F9E00ECD2DF /* Base */,
 			);
-			name = Main.storyboard;
+			name = RSSController.storyboard;
 			sourceTree = "<group>";
 		};
 		AB33F1BD24614FA300ECD2DF /* LaunchScreen.storyboard */ = {
@@ -291,6 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YVR89PX7TG;
 				INFOPLIST_FILE = RSSFeedReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +615,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = munara.RSSFeedReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,6 +626,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YVR89PX7TG;
 				INFOPLIST_FILE = RSSFeedReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +634,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = munara.RSSFeedReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -344,12 +662,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AB33F1B824614F9E00ECD2DF /* RSSFeedReader.xcdatamodeld */ = {
+		ABDBEB3C24641D24003FC0A7 /* RSSFeedReader.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AB33F1B924614F9E00ECD2DF /* RSSFeedReader.xcdatamodel */,
+				ABDBEB3D24641D24003FC0A7 /* RSSFeedReader.xcdatamodel */,
 			);
-			currentVersion = AB33F1B924614F9E00ECD2DF /* RSSFeedReader.xcdatamodel */;
+			currentVersion = ABDBEB3D24641D24003FC0A7 /* RSSFeedReader.xcdatamodel */;
 			path = RSSFeedReader.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
