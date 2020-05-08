@@ -42,10 +42,36 @@ class WeatherDataStore: NSObject {
         }
         
     }
-    func fetchCities(completion: @escaping([City]) -> Void) {
-        self.persistence.fetch(type: City.self) { result in
-            completion(result)
+    func firstRun(completion: @escaping([City]) -> Void) {
+       let city1 = City(context: self.persistence.context)
+        city1.name = "Bishkek"
+        let city2 = City(context: self.persistence.context)
+        city2.name = "Almata"
+        DispatchQueue.main.async {
+            self.persistence.save {
+                self.persistence.fetch(type: City.self) { result in
+                    completion(result)
+                }
+             
+            }
         }
+        
+    }
+    func fetchCities(completion: @escaping([City]) -> Void) {
+        let userDefaults = UserDefaults.standard
+        let defaultValues = ["weatherFirstRun" : true]
+        userDefaults.register(defaults: defaultValues)
+        if userDefaults.bool(forKey: "weatherFirstRun") {
+           userDefaults.set(false, forKey: "weatherFirstRun")
+           self.firstRun { result in
+               completion(result)
+           }
+       } else {
+           self.persistence.fetch(type: City.self) { result in
+               completion(result)
+           }
+       }
+        
     }
     func deleteCity(city: City, completion: @escaping() -> Void) {
         self.persistence.context.delete(city)

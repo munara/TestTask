@@ -15,9 +15,12 @@ class RSSViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel?.fetchFeeds()
+        setup()
     }
-    
+    func setup() {
+        viewModel?.fetchFeeds()
+        
+    }
     @IBAction func addFeedButtonTapped(_ sender: Any) {
         showAlert()
     }
